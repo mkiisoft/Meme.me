@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SecondVersionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var titleButton: UIButton!
@@ -197,7 +197,11 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         label.alpha = 1
     }
     
-    @IBAction func comeBack(sender: AnyObject) {
-       self.dismissViewControllerAnimated(false, completion: nil)
+    @IBAction func returnVersion(sender: AnyObject) {
+        let transition = CATransition()
+        transition.duration = 0.3;
+        transition.type = kCATransitionFade;
+        self.view.window!.layer.addAnimation(transition, forKey: kCATransition)
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
 }

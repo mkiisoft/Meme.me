@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D51227A71BE2F3740086A0F1 /* VersionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */; };
+		D51227A91BE31C150086A0F1 /* FirstVersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51227A81BE31C150086A0F1 /* FirstVersionViewController.swift */; };
 		D512BDB51BDAF3CD00525BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */; };
-		D512BDB71BDAF3CD00525BBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB61BDAF3CD00525BBE /* ViewController.swift */; };
+		D512BDB71BDAF3CD00525BBE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB61BDAF3CD00525BBE /* LaunchScreenViewController.swift */; };
 		D512BDBA1BDAF3CD00525BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D512BDB81BDAF3CD00525BBE /* Main.storyboard */; };
 		D512BDBC1BDAF3CD00525BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D512BDBB1BDAF3CD00525BBE /* Assets.xcassets */; };
 		D512BDBF1BDAF3CD00525BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D512BDBD1BDAF3CD00525BBE /* LaunchScreen.storyboard */; };
 		D512BDCA1BDAF3CE00525BBE /* Meme_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDC91BDAF3CE00525BBE /* Meme_meTests.swift */; };
 		D512BDD51BDAF3CE00525BBE /* Meme_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDD41BDAF3CE00525BBE /* Meme_meUITests.swift */; };
-		D512BDE91BDB02EB00525BBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDE81BDB02EB00525BBE /* MainViewController.swift */; };
+		D512BDE91BDB02EB00525BBE /* SecondVersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDE81BDB02EB00525BBE /* SecondVersionViewController.swift */; };
 		D512BDEB1BDB042400525BBE /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDEA1BDB042400525BBE /* CustomSegue.swift */; };
 		D5BFEC9B1BDC3FDF00E156D4 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEC9A1BDC3FDF00E156D4 /* SelectViewController.swift */; };
 		D5BFEC9D1BDC46FF00E156D4 /* monofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5BFEC9C1BDC46FF00E156D4 /* monofont.ttf */; };
@@ -40,9 +41,10 @@
 
 /* Begin PBXFileReference section */
 		D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSelectViewController.swift; sourceTree = "<group>"; };
+		D51227A81BE31C150086A0F1 /* FirstVersionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVersionViewController.swift; sourceTree = "<group>"; };
 		D512BDB11BDAF3CD00525BBE /* Meme.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D512BDB61BDAF3CD00525BBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D512BDB61BDAF3CD00525BBE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		D512BDB91BDAF3CD00525BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D512BDBB1BDAF3CD00525BBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D512BDBE1BDAF3CD00525BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		D512BDD01BDAF3CE00525BBE /* Meme.meUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Meme.meUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D512BDD41BDAF3CE00525BBE /* Meme_meUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme_meUITests.swift; sourceTree = "<group>"; };
 		D512BDD61BDAF3CE00525BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D512BDE81BDB02EB00525BBE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D512BDE81BDB02EB00525BBE /* SecondVersionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVersionViewController.swift; sourceTree = "<group>"; };
 		D512BDEA1BDB042400525BBE /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		D5BFEC9A1BDC3FDF00E156D4 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		D5BFEC9C1BDC46FF00E156D4 /* monofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = monofont.ttf; path = ../../../../Designs/monofont.ttf; sourceTree = "<group>"; };
@@ -109,15 +111,16 @@
 			children = (
 				D5BFEC9C1BDC46FF00E156D4 /* monofont.ttf */,
 				D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */,
-				D512BDB61BDAF3CD00525BBE /* ViewController.swift */,
+				D512BDB61BDAF3CD00525BBE /* LaunchScreenViewController.swift */,
 				D512BDB81BDAF3CD00525BBE /* Main.storyboard */,
 				D512BDBB1BDAF3CD00525BBE /* Assets.xcassets */,
 				D512BDBD1BDAF3CD00525BBE /* LaunchScreen.storyboard */,
 				D512BDC01BDAF3CD00525BBE /* Info.plist */,
-				D512BDE81BDB02EB00525BBE /* MainViewController.swift */,
+				D512BDE81BDB02EB00525BBE /* SecondVersionViewController.swift */,
 				D512BDEA1BDB042400525BBE /* CustomSegue.swift */,
 				D5BFEC9A1BDC3FDF00E156D4 /* SelectViewController.swift */,
 				D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */,
+				D51227A81BE31C150086A0F1 /* FirstVersionViewController.swift */,
 			);
 			path = Meme.me;
 			sourceTree = "<group>";
@@ -273,10 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BFEC9B1BDC3FDF00E156D4 /* SelectViewController.swift in Sources */,
+				D51227A91BE31C150086A0F1 /* FirstVersionViewController.swift in Sources */,
 				D51227A71BE2F3740086A0F1 /* VersionSelectViewController.swift in Sources */,
 				D512BDEB1BDB042400525BBE /* CustomSegue.swift in Sources */,
-				D512BDE91BDB02EB00525BBE /* MainViewController.swift in Sources */,
-				D512BDB71BDAF3CD00525BBE /* ViewController.swift in Sources */,
+				D512BDE91BDB02EB00525BBE /* SecondVersionViewController.swift in Sources */,
+				D512BDB71BDAF3CD00525BBE /* LaunchScreenViewController.swift in Sources */,
 				D512BDB51BDAF3CD00525BBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

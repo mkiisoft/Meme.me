@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LaunchScreenViewController: UIViewController {
 
     @IBOutlet weak var lauchLogo: UIImageView!
     @IBOutlet weak var launchSmall: UIImageView!

@@ -14,10 +14,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Launch Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchScreenViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="62" y="284"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Second Version View Controller-->
         <scene sceneID="1yt-dY-kGR">
             <objects>
-                <viewController id="IAg-CW-6wI" customClass="MainViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IAg-CW-6wI" customClass="SecondVersionViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JdI-9X-B8z"/>
                         <viewControllerLayoutGuide type="bottom" id="8Mn-0m-Bnq"/>
@@ -493,7 +493,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="comeBack:" destination="IAg-CW-6wI" eventType="touchUpInside" id="6Qj-qk-yyb"/>
+                                    <action selector="returnVersion:" destination="IAg-CW-6wI" eventType="touchUpInside" id="9ww-Sg-B3d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -733,18 +733,65 @@
             </objects>
             <point key="canvasLocation" x="766.5" y="284"/>
         </scene>
-        <!--View Controller-->
+        <!--First Version View Controller-->
         <scene sceneID="csO-Hs-0zQ">
             <objects>
-                <viewController id="33T-BQ-qQV" sceneMemberID="viewController">
+                <viewController id="33T-BQ-qQV" customClass="FirstVersionViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dhx-Pm-xB6"/>
                         <viewControllerLayoutGuide type="bottom" id="JZu-ZS-3cq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ea3-q6-LhF">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost there! Hang on!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cM-fA-s71">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2b-qd-DBB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="returnVersion:" destination="33T-BQ-qQV" eventType="touchUpInside" id="RPF-zV-wh2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9cM-fA-s71" firstAttribute="centerX" secondItem="Ea3-q6-LhF" secondAttribute="centerX" id="4H4-9N-FEy"/>
+                            <constraint firstItem="9cM-fA-s71" firstAttribute="top" secondItem="dhx-Pm-xB6" secondAttribute="bottom" constant="119" id="7Zv-5g-mNq"/>
+                            <constraint firstItem="g2b-qd-DBB" firstAttribute="centerX" secondItem="Ea3-q6-LhF" secondAttribute="centerX" id="XUu-Jg-MUs"/>
+                            <constraint firstItem="g2b-qd-DBB" firstAttribute="centerY" secondItem="Ea3-q6-LhF" secondAttribute="centerY" id="z7U-EZ-hDR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9cM-fA-s71"/>
+                                <exclude reference="g2b-qd-DBB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4H4-9N-FEy"/>
+                                <exclude reference="7Zv-5g-mNq"/>
+                                <exclude reference="XUu-Jg-MUs"/>
+                                <exclude reference="z7U-EZ-hDR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9cM-fA-s71"/>
+                                <include reference="g2b-qd-DBB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4H4-9N-FEy"/>
+                                <include reference="7Zv-5g-mNq"/>
+                                <include reference="XUu-Jg-MUs"/>
+                                <include reference="z7U-EZ-hDR"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcF-bN-7H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
