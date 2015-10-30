@@ -9,8 +9,10 @@
 import UIKit
 
 class MainViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     
+    
+    @IBOutlet weak var titleButton: UIButton!
+
     @IBOutlet weak var pickFromGallery: UILabel!
     @IBOutlet weak var pickFromCamera: UILabel!
     @IBOutlet weak var pickFromInternet: UILabel!
@@ -37,8 +39,6 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         enableSender(imageCamera, target: "imageTappedCamera:")
         
         changeFont(["GALLERY", "CAMERA", "INTERNET", "ARCHIVE"], length: [7,6,8,7], label: [pickFromGallery, pickFromCamera, pickFromInternet, pickFromArchive], font: "monofur", size: 18)
-        
-        initViewAlpha([fromGallery, fromCamera, fromInternet, fromArchive], alpha: 0)
 
     }
     
@@ -92,29 +92,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func imageTappedCamera(img: AnyObject) {
         
-        let nextController = UIAlertController()
-        let okAction = UIAlertAction(
-            title: "ok",
-            style: UIAlertActionStyle.Default){ action in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        nextController.addAction(okAction)
-        self.presentViewController(nextController, animated: true, completion: nil)
-        /*
-        let image = UIImage()
-        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.presentViewController(controller, animated: true, completion: nil)
-*/
     }
-    
-    /*
-        let nextController = UIAlertController()
-        let okAction = UIAlertAction (title: "ok", style: UIAlertActionStyle.Default){ action in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        nextController.addAction(okAction)
-        self.presentViewController(nextController, animated: true, completion: nil)
-    */
     
     /*!
     *
@@ -126,7 +104,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         UIView.animateWithDuration(0.5, delay: 0, options: [.CurveEaseIn], animations: {
             self.imageGallery.image = UIImage(named: "From Gallery")!.imageWithRenderingMode(.AlwaysTemplate)
             self.imageGallery.tintColor = UIColor.whiteColor()
-            self.pickFromGallery.alpha = 0; self.initViewAlpha([self.fromCamera, self.fromInternet, self.fromArchive], alpha: 0)
+            self.pickFromGallery.alpha = 0; self.initViewAlpha([self.fromCamera, self.fromInternet, self.fromArchive], alpha: 0); self.titleButton.alpha = 0
             }, completion: {
                 (Bool) -> Void in
                 UIView.animateWithDuration(0.5, delay: 0.2, options: [.CurveEaseIn], animations: {
@@ -134,6 +112,8 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     }
                     , completion: {
                         (Bool) -> Void in
+                        self.imagePicker.delegate = self
+                        self.imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
                         self.presentViewController(self.imagePicker, animated: true, completion: nil)
                         self.imagePickerBool = true
                         
@@ -180,7 +160,8 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func startAnimation(stack: [UIStackView], duration: NSTimeInterval, delay: [NSTimeInterval]) {
         for i in 0...stack.count - 1 {
-            UIView.animateWithDuration(duration, delay: delay[i], usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .CurveEaseIn, animations: {
+            UIView.animateWithDuration(duration, delay: delay[i], usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: [.CurveEaseIn, .AllowUserInteraction], animations: {
+                    self.titleButton.alpha = 1
                     stack[i].center.y = stack[i].frame.origin.y + 90
                     stack[i].alpha = 1
                 }, completion: nil)
@@ -211,7 +192,12 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func resetImageState(image: UIImageView, imageset: String, label: UILabel){
         image.transform = CGAffineTransformMakeScale(1, 1)
+        image.tintColor = UIColor.clearColor()
         image.image = UIImage(named: imageset)
         label.alpha = 1
+    }
+    
+    @IBAction func comeBack(sender: AnyObject) {
+       self.dismissViewControllerAnimated(false, completion: nil)
     }
 }

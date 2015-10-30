@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                                     
                                     }, completion: {
                                         (Bool) -> Void in
-                                        self.performSegueWithIdentifier("mainscreen", sender: self)
+                                        self.performSegueWithIdentifier("versionselect", sender: self)
                                 })
                                 
                         })

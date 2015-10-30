@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51227A71BE2F3740086A0F1 /* VersionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */; };
 		D512BDB51BDAF3CD00525BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */; };
 		D512BDB71BDAF3CD00525BBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB61BDAF3CD00525BBE /* ViewController.swift */; };
 		D512BDBA1BDAF3CD00525BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D512BDB81BDAF3CD00525BBE /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSelectViewController.swift; sourceTree = "<group>"; };
 		D512BDB11BDAF3CD00525BBE /* Meme.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D512BDB61BDAF3CD00525BBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D512BDE81BDB02EB00525BBE /* MainViewController.swift */,
 				D512BDEA1BDB042400525BBE /* CustomSegue.swift */,
 				D5BFEC9A1BDC3FDF00E156D4 /* SelectViewController.swift */,
+				D51227A61BE2F3740086A0F1 /* VersionSelectViewController.swift */,
 			);
 			path = Meme.me;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BFEC9B1BDC3FDF00E156D4 /* SelectViewController.swift in Sources */,
+				D51227A71BE2F3740086A0F1 /* VersionSelectViewController.swift in Sources */,
 				D512BDEB1BDB042400525BBE /* CustomSegue.swift in Sources */,
 				D512BDE91BDB02EB00525BBE /* MainViewController.swift in Sources */,
 				D512BDB71BDAF3CD00525BBE /* ViewController.swift in Sources */,
