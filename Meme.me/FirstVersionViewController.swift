@@ -31,12 +31,11 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var titleButton: UIButton!
     let imagePicker = UIImagePickerController()
     
-    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    var kbHeight: CGFloat!
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
     let aspectWide:CGFloat = 1.33
     let aspectSquare:CGFloat = 1
-    
-    var kbHeight: CGFloat!
     
     let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
     
@@ -53,7 +52,7 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         NSForegroundColorAttributeName: UIColor.whiteColor(),
         NSStrokeColorAttributeName: UIColor.blackColor(),
         NSFontAttributeName: UIFont(name: "Impact", size: 43)!,
-        NSStrokeWidthAttributeName: -6.0
+        NSStrokeWidthAttributeName: -4.0
     ]
 
     override func viewDidLoad() {
@@ -117,6 +116,7 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
                 () -> Void in
                 
                 self.resetVisual()
+                self.setButtonImage([self.galleryButton, self.cameraButton], source: ["From Gallery", "From Camera"])
             })
         }
         
@@ -196,8 +196,13 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         toggleStack.hidden = true
         titleButton.hidden = false
         
-        setButtonImage([galleryButton, cameraButton], source: ["From Gallery", "From Camera"])
     }
+    
+    /*
+    *
+    *   @brief  Check if Device has a Camera or not
+    *
+    */
     
     func isCameraAvailable() {
         if cameraButton.currentImage == UIImage(named: "From Camera") {

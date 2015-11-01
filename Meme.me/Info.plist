@@ -28,6 +28,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>impact.ttf</string>
 		<string>monofont.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

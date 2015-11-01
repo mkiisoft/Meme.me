@@ -7,10 +7,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="impact.ttf">
-            <string>Impact</string>
-            <string>Impact</string>
-        </mutableArray>
         <mutableArray key="monofont.ttf">
             <string>Monofur</string>
             <string>Monofur</string>
@@ -819,30 +815,6 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-lq-H6k">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="360" id="fGy-7R-5Pc"/>
-                                    <constraint firstAttribute="height" constant="52" id="h0C-68-dp6"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="fGy-7R-5Pc"/>
-                                        <exclude reference="h0C-68-dp6"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="43"/>
-                                    <mask key="constraints">
-                                        <include reference="fGy-7R-5Pc"/>
-                                        <include reference="h0C-68-dp6"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dSj-c7-O2J">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
@@ -860,7 +832,6 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="43"/>
                                     <mask key="constraints">
                                         <include reference="GC1-i6-GGg"/>
                                         <include reference="jfo-NL-8Rw"/>
@@ -949,6 +920,29 @@
                                     <action selector="returnVersion:" destination="33T-BQ-qQV" eventType="touchUpInside" id="Ay0-ci-l4v"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-lq-H6k">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="fGy-7R-5Pc"/>
+                                    <constraint firstAttribute="height" constant="52" id="h0C-68-dp6"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fGy-7R-5Pc"/>
+                                        <exclude reference="h0C-68-dp6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="fGy-7R-5Pc"/>
+                                        <include reference="h0C-68-dp6"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.62352941176470589" green="0.0" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
@@ -989,11 +983,11 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="se4-5r-E10"/>
-                                <exclude reference="Kgg-lq-H6k"/>
                                 <exclude reference="dSj-c7-O2J"/>
                                 <exclude reference="oYE-Yn-Tgx"/>
                                 <exclude reference="z0B-18-3bx"/>
                                 <exclude reference="2go-ko-GmV"/>
+                                <exclude reference="Kgg-lq-H6k"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="R2o-Nr-hys"/>
@@ -1019,11 +1013,11 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="se4-5r-E10"/>
-                                <include reference="Kgg-lq-H6k"/>
                                 <include reference="dSj-c7-O2J"/>
                                 <include reference="oYE-Yn-Tgx"/>
                                 <include reference="z0B-18-3bx"/>
                                 <include reference="2go-ko-GmV"/>
+                                <include reference="Kgg-lq-H6k"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="R2o-Nr-hys"/>
