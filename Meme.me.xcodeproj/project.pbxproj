@@ -13,6 +13,7 @@
 		D51227ED1BE5E5CB0086A0F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51227EC1BE5E5CB0086A0F1 /* File.swift */; };
 		D51227F31BE614C00086A0F1 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D51227F21BE614C00086A0F1 /* impact.ttf */; };
 		D51227F51BE61FE10086A0F1 /* monofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D51227F41BE61FE10086A0F1 /* monofont.ttf */; };
+		D51227F71BE68ACC0086A0F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D51227F61BE68ACC0086A0F1 /* Images.xcassets */; };
 		D512BDB51BDAF3CD00525BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */; };
 		D512BDB71BDAF3CD00525BBE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512BDB61BDAF3CD00525BBE /* LaunchScreenViewController.swift */; };
 		D512BDBA1BDAF3CD00525BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D512BDB81BDAF3CD00525BBE /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		D51227EC1BE5E5CB0086A0F1 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D51227F21BE614C00086A0F1 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 		D51227F41BE61FE10086A0F1 /* monofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = monofont.ttf; sourceTree = "<group>"; };
+		D51227F61BE68ACC0086A0F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D512BDB11BDAF3CD00525BBE /* Meme.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D512BDB41BDAF3CD00525BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D512BDB61BDAF3CD00525BBE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D512BDBB1BDAF3CD00525BBE /* Assets.xcassets */,
 				D512BDBD1BDAF3CD00525BBE /* LaunchScreen.storyboard */,
 				D512BDC01BDAF3CD00525BBE /* Info.plist */,
+				D51227F61BE68ACC0086A0F1 /* Images.xcassets */,
 			);
 			path = Meme.me;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				D51227F31BE614C00086A0F1 /* impact.ttf in Resources */,
 				D512BDBF1BDAF3CD00525BBE /* LaunchScreen.storyboard in Resources */,
 				D512BDBC1BDAF3CD00525BBE /* Assets.xcassets in Resources */,
+				D51227F71BE68ACC0086A0F1 /* Images.xcassets in Resources */,
 				D51227F51BE61FE10086A0F1 /* monofont.ttf in Resources */,
 				D512BDBA1BDAF3CD00525BBE /* Main.storyboard in Resources */,
 			);
@@ -459,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Meme.me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mkiisoft.Meme-me";
@@ -470,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Meme.me/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mkiisoft.Meme-me";

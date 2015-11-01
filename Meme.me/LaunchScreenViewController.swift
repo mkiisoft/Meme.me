@@ -31,8 +31,8 @@ class LaunchScreenViewController: UIViewController {
         for i in 0...image.count - 1 {
             UIView.animateWithDuration(1.2,
                 delay: delay[i],
-                usingSpringWithDamping: 0.3,
-                initialSpringVelocity: 10.0,
+                usingSpringWithDamping: 0.4,
+                initialSpringVelocity: 5.0,
                 options: .CurveLinear,
                 animations: {
                     image[i].transform = CGAffineTransformMakeScale(1, 1)
@@ -44,11 +44,11 @@ class LaunchScreenViewController: UIViewController {
             self.launchSmall.transform = CGAffineTransformMakeRotation(75)
             }, completion: {
                 (Bool) -> Void in
-                UIView.animateWithDuration(0.3, delay: 0.3, options: [], animations: {
+                UIView.animateWithDuration(0.3, delay: 0.6, options: [], animations: {
                     self.launchSmall.alpha = 0
                     }, completion: {
                         (Bool) -> Void in
-                        UIView.animateWithDuration(0.5, delay: 0.2, options: [.CurveEaseOut], animations: {
+                        UIView.animateWithDuration(0.5, delay: 0.2, options: [.CurveEaseIn], animations: {
                             self.launchLogo.transform = CGAffineTransformMakeScale(150, 150)
                             }, completion: {
                                 (Bool) -> Void in

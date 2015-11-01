@@ -74,7 +74,7 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         super.viewWillAppear(animated)
         
         dispatch_after(delayTime, dispatch_get_main_queue()) {
-            self.initButtonAnimation([self.galleryY, self.cameraY], delay: [0.0, 0.4])
+            self.initButtonAnimation([self.galleryY, self.cameraY], delay: [0.0, 0.1])
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
@@ -116,7 +116,9 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
                 () -> Void in
                 
                 self.resetVisual()
+            
                 self.setButtonImage([self.galleryButton, self.cameraButton], source: ["From Gallery", "From Camera"])
+                self.isCameraAvailable()
             })
         }
         
@@ -167,8 +169,8 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
             button[i].constant = +20
             UIView.animateWithDuration(0.8,
                 delay: delay[i],
-                usingSpringWithDamping: 0.3,
-                initialSpringVelocity: 10.0,
+                usingSpringWithDamping: 0.4,
+                initialSpringVelocity: 5.0,
                 options: .CurveLinear,
                 animations: {
                     self.view.layoutIfNeeded()
