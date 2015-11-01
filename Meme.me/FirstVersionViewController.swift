@@ -37,7 +37,7 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
     let aspectWide:CGFloat = 1.33
     let aspectSquare:CGFloat = 1
     
-    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_SEC)))
     
     var finishAnimation = false
     var didSelectImage  = false

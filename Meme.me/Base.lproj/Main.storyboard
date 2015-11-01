@@ -101,7 +101,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="lauchLogo" destination="iz5-hN-nEy" id="J2a-MR-TDB"/>
+                        <outlet property="launchLogo" destination="iz5-hN-nEy" id="haB-OD-AT4"/>
                         <outlet property="launchSmall" destination="qjy-Fg-Duu" id="6Kz-Da-EQn"/>
                         <segue destination="0A1-lx-HwV" kind="custom" identifier="versionselect" customClass="CustomSegue" customModule="Meme_me" customModuleProvider="target" id="OKX-oY-gIm"/>
                     </connections>
