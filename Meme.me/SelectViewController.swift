@@ -10,8 +10,11 @@ import UIKit
 
 class SelectViewController: UIViewController {
     
+    let Utils = SwiftUtils()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
 
     @IBAction func selectBack(sender: UIButton) {

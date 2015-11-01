@@ -10,6 +10,7 @@ import UIKit
 
 class SecondVersionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let Utils = SwiftUtils()
     
     @IBOutlet weak var titleButton: UIButton!
 
@@ -100,7 +101,7 @@ class SecondVersionViewController: UIViewController, UIImagePickerControllerDele
     *
     */
     
-    func imageTappedGallery(img: AnyObject) {
+    func imageTappedGallery(sender:UITapGestureRecognizer!) {
         UIView.animateWithDuration(0.5, delay: 0, options: [.CurveEaseIn], animations: {
             self.imageGallery.image = UIImage(named: "From Gallery")!.imageWithRenderingMode(.AlwaysTemplate)
             self.imageGallery.tintColor = UIColor.whiteColor()

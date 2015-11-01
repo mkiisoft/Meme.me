@@ -43,7 +43,7 @@ class VersionSelectViewController: UIViewController {
     }
     
     @IBAction func versionOneSelect(sender: AnyObject) {
-        initVersionSelect(versionOne, buttontwo: versionTwo, text: versionOneText, texttwo: versionTwoText, width: versionOneWidth, segue: "versionone", color: false)
+        initVersionSelect(versionOne, buttontwo: versionTwo, text: versionOneText, texttwo: versionTwoText, width: versionOneWidth, segue: "versionone", color: true)
     }
     
     @IBAction func versionTwoSelect(sender: AnyObject) {
