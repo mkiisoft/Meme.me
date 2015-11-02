@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Meme.swift
 //  Meme.me
 //
 //  Created by Mariano Zorrilla on 11/1/15.
@@ -8,10 +8,6 @@
 
 import Foundation
 
-class Meme: NSObject {
+class MemeDAO {
     
-    override init() {
-        super.init()
-        
-    }
 }
