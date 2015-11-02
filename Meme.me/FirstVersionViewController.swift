@@ -353,6 +353,7 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
             textField[i].delegate = self
             textField[i].defaultTextAttributes = textAttributes
             textField[i].textAlignment = .Center
+            textField[i].autocapitalizationType = .AllCharacters
         }
     }
     
