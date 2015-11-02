@@ -5,6 +5,8 @@
 //  Created by Mariano Zorrilla on 10/30/15.
 //  Copyright © 2015 MkiiSoft. All rights reserved.
 //
+//  Part of Version 1.0
+//
 
 import UIKit
 
@@ -42,6 +44,8 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
     var finishAnimation = false
     var didSelectImage  = false
     
+    var saveMeme: MemeDAO?
+    
     /*
     *
     *   @brief  Attributes to style the TextFields
@@ -54,6 +58,15 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         NSFontAttributeName: UIFont(name: "Impact", size: 43)!,
         NSStrokeWidthAttributeName: -4.0
     ]
+    
+    /*
+    *
+    *   @brief  Init Aspect Ratio Image
+    *           Init Toggle Aspect Ratio Selector
+    *           Init Check if Camera is available
+    *           Init The SaveMeme DAO
+    *
+    */
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +81,21 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         titleButton.hidden = false
         toggleStack.hidden = true
         
+        if let meme = saveMeme {
+            editTextTop.text = meme.editTop
+            editTextBottom.text = meme.editBottom
+            imageMeme.image = meme.image
+        }
+        
     }
+    
+    /*
+    *
+    *   @brief  Notification Subscribe
+    *           Button Animations
+    *           Reset location when Pick Image
+    *
+    */
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -88,11 +115,23 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         }
     }
     
+    /*
+    *
+    *   @brief  Notification Unsubscribe
+    *
+    */
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
+    /*
+    *
+    *   @brief  Logo Action returns to Version Select
+    *
+    */
 
     @IBAction func returnVersion(sender: AnyObject) {
         let transition = CATransition()
@@ -102,6 +141,17 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         self.dismissViewControllerAnimated(false,
         completion: nil)
     }
+    
+    /*
+    *
+    *   @brief  Action Button Gallery / Share
+    *           
+    *           -Image Selection from Gallery
+    *           
+    *           -Generate the Meme, Share it,
+    *            Save the Meme in Device
+    *
+    */
     
     @IBAction func selectGallery(sender: AnyObject) {
         
@@ -115,6 +165,12 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
             presentViewController(activity, animated: true, completion: {
                 () -> Void in
                 
+                let memeImage = self.imageMeme.image
+                
+                let meme = MemeDAO (editTop: self.editTextTop.text!, editBottom: self.editTextBottom.text!, image: memeImage!, imageMeme: image)
+                
+                meme.save()
+                
                 self.resetVisual()
             
                 self.setButtonImage([self.galleryButton, self.cameraButton], source: ["From Gallery", "From Camera"])
@@ -123,6 +179,16 @@ class FirstVersionViewController: UIViewController, UINavigationControllerDelega
         }
         
     }
+    
+    /*
+    *
+    *   @brief  Action Button Camera / Canel
+    *
+    *           -Image Selection from Camera
+    *
+    *           -Return View to Default State
+    *
+    */
     
     @IBAction func selectCamera(sender: AnyObject) {
         if cameraButton.currentImage == UIImage(named: "From Camera") {

@@ -1,9 +1,11 @@
 //
-//  ViewController.swift
+//  LaunchScreenViewController.swift
 //  Meme.me
 //
 //  Created by Mariano Zorrilla on 10/23/15.
 //  Copyright © 2015 MkiiSoft. All rights reserved.
+//
+//  Launch Screen
 //
 
 import UIKit
@@ -23,9 +25,22 @@ class LaunchScreenViewController: UIViewController {
         
     }
     
+    /*
+     *
+     * @brief CustomSegue with Custom Animation
+     *
+     */
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "mainscreen" {}
     }
+    
+    /*
+     *
+     * @brief Init the Launch Screen animation with
+     *        Custom Segue after finish
+     *
+     */
     
     func lauchScreenAnimation(image: [UIImageView], delay: [NSTimeInterval]) {
         for i in 0...image.count - 1 {

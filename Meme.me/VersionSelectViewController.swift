@@ -5,6 +5,8 @@
 //  Created by Mariano Zorrilla on 10/29/15.
 //  Copyright © 2015 MkiiSoft. All rights reserved.
 //
+//  Version Select: 1.0 & 2.0
+//
 
 import UIKit
 
@@ -42,19 +44,31 @@ class VersionSelectViewController: UIViewController {
         initButtonAnimation(versionTwo, text: versionTwoText, width: versionTwoWidth, delay: 0.8, delaytwo: 0.3)
     }
     
+    /*
+    *
+    * @brief Action for Version 1.0
+    *
+    */
+    
     @IBAction func versionOneSelect(sender: AnyObject) {
         initVersionSelect(versionOne, buttontwo: versionTwo, text: versionOneText, texttwo: versionTwoText, width: versionOneWidth, segue: "versionone", color: true)
     }
+    
+    /*
+    *
+    * @brief Action for Version 2.0
+    *
+    */
     
     @IBAction func versionTwoSelect(sender: AnyObject) {
         initVersionSelect(versionTwo, buttontwo: versionOne, text: versionTwoText, texttwo: versionOneText, width: versionTwoWidth, segue: "versiontwo", color: true)
     }
     
     /*
-    *
-    * @brief Setting the default button style
-    *
-    */
+     *
+     * @brief Setting the default button style
+     *
+     */
     
     func setButtonStyle(button: [UIButton]){
         
@@ -69,10 +83,10 @@ class VersionSelectViewController: UIViewController {
     }
     
     /*
-    *
-    * @brief Setting the animation when the buttons appear
-    *
-    */
+     *
+     * @brief Setting the animation when the buttons appear
+     *
+     */
     
     func initButtonAnimation(button: UIButton, text: UILabel, width: NSLayoutConstraint, delay: NSTimeInterval, delaytwo: NSTimeInterval) {
         UIView.animateWithDuration(0.4, delay: delay, options: [.CurveEaseInOut], animations: {
@@ -100,10 +114,10 @@ class VersionSelectViewController: UIViewController {
     }
     
     /*
-    *
-    * @brief Button selection animation
-    *
-    */
+     *
+     * @brief Button selection animation
+     *
+     */
     
     func initVersionSelect(button: UIButton, buttontwo: UIButton, text: UILabel, texttwo: UILabel, width:
         NSLayoutConstraint, segue: String, color: Bool) {
@@ -134,6 +148,12 @@ class VersionSelectViewController: UIViewController {
                 })
         })
     }
+    
+    /*
+     *
+     * @brief Return objects to Normal State
+     *
+     */
     
     func normalState() {
         

@@ -599,11 +599,24 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT VERSION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6e-rQ-imK">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="d1j-3x-gqr"/>
+                                    <constraint firstAttribute="height" constant="22.5" id="tOF-O5-Nac"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Monofur" family="monofur" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="121" y="83" width="158" height="22.5"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d1j-3x-gqr"/>
+                                        <exclude reference="tOF-O5-Nac"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="d1j-3x-gqr"/>
+                                        <include reference="tOF-O5-Nac"/>
+                                    </mask>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvP-nH-8Jf">
@@ -638,21 +651,47 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUZ-QM-V5G">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95.5" id="340-2W-obe"/>
+                                    <constraint firstAttribute="height" constant="19" id="5on-kD-8Oj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Monofur" family="monofur" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="151" y="356" width="95.5" height="19"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="340-2W-obe"/>
+                                        <exclude reference="5on-kD-8Oj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="340-2W-obe"/>
+                                        <include reference="5on-kD-8Oj"/>
+                                    </mask>
                                 </variation>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKj-XT-Y54">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95.5" id="AMX-mh-6c9"/>
+                                    <constraint firstAttribute="height" constant="19" id="rOa-46-dAZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Monofur" family="monofur" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="152" y="224" width="95.5" height="19"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AMX-mh-6c9"/>
+                                        <exclude reference="rOa-46-dAZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AMX-mh-6c9"/>
+                                        <include reference="rOa-46-dAZ"/>
+                                    </mask>
                                 </variation>
                             </label>
                         </subviews>
@@ -1060,10 +1099,10 @@
             </objects>
             <point key="canvasLocation" x="1495.5" y="-61"/>
         </scene>
-        <!--Select View Controller-->
+        <!--Select Gallery Controller-->
         <scene sceneID="fE3-WD-u5b">
             <objects>
-                <viewController id="XPB-oC-mFZ" customClass="SelectViewController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XPB-oC-mFZ" customClass="SelectGalleryController" customModule="Meme_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I5a-tC-PjE"/>
                         <viewControllerLayoutGuide type="bottom" id="DZL-F5-94A"/>

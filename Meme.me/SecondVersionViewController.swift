@@ -1,16 +1,16 @@
 //
-//  MainViewController.swift
+//  SecondVersionViewController.swift
 //  Meme.me
 //
 //  Created by Mariano Zorrilla on 10/23/15.
 //  Copyright © 2015 MkiiSoft. All rights reserved.
 //
+//  Part of Version 2.0
+//
 
 import UIKit
 
 class SecondVersionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    let Utils = SwiftUtils()
     
     @IBOutlet weak var titleButton: UIButton!
 
